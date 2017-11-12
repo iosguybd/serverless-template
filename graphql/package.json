@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "sls offline"
+  },
+  "dependencies": {
+    "apollo-server-lambda": "^1.1.2",
+    "graphql": "^0.11.3",
+    "graphql-playground-middleware-lambda": "^1.1.2",
+    "graphql-tools": "^1.2.3"
+  },
+  "devDependencies": {
+    "serverless-offline": "^3.16.0",
+    "serverless-plugin-typescript": "^1.1.2"
+  }
+}

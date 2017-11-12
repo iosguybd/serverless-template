@@ -1,0 +1,38 @@
+service: serverless-template
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+provider:
+  name: aws
+  region: eu-west-1
+  runtime: nodejs6.10
+  deploymentBucket: serverless-deployments-${env:AWS_REGION}-${env:AWS_ACCOUNT_ID}
+
+functions:
+
+  Graphql:
+    handler: handler.default
+    events:
+      - http:
+          path: /
+          method: post
+
+  Playground:
+    handler: handler.playground
+    events:
+      - http:
+          path: /
+          method: get
+
+resources:
+  Resources:
+
+    GraphqlLogGroup:
+      Properties:
+        RetentionInDays: 7
+
+    PlaygroundLogGroup:
+      Properties:
+        RetentionInDays: 7

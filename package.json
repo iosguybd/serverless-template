@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "sls offline"
+  },
+  "dependencies": {
+    "lambda-helpers": "^0.2.2"
+  },
+  "devDependencies": {
+    "serverless-offline": "^3.16.0",
+    "serverless-plugin-typescript": "^1.1.2"
+  }
+}

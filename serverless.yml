@@ -1,0 +1,27 @@
+service: serverless-template
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+provider:
+  name: aws
+  region: eu-west-1
+  runtime: nodejs6.10
+  deploymentBucket: serverless-deployments-${env:AWS_REGION}-${env:AWS_ACCOUNT_ID}
+
+functions:
+
+  Handler:
+    handler: handler.default
+    events:
+      - http:
+          path: /
+          method: any
+
+resources:
+  Resources:
+
+    HandlerLogGroup:
+      Properties:
+        RetentionInDays: 7

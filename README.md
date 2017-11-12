@@ -6,11 +6,11 @@ Template for Serverless services (based on TypeScript)
 ### HTTP template
 
 ```sh
-sls create -u https://github.com/graphcool/serverless-template/blob/master/http
+sls create -u https://github.com/graphcool/serverless-template/tree/master/http
 ```
 
 ### GraphQL endpoint template
 
 ```sh
-sls create -u https://github.com/graphcool/serverless-template/blob/master/graphql
+sls create -u https://github.com/graphcool/serverless-template/tree/master/graphql
 ```

@@ -1,5 +1,5 @@
 import { makeExecutableSchema } from 'graphql-tools'
-import { graphqlLambda, graphiqlLambda } from 'apollo-server-lambda'
+import { graphqlLambda } from 'apollo-server-lambda'
 import lambdaPlayground from 'graphql-playground-middleware-lambda'
 
 const typeDefs = `

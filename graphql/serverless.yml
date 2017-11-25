@@ -3,12 +3,18 @@ service: serverless-template
 plugins:
   - serverless-plugin-typescript
   - serverless-offline
+  - serverless-prune-plugin
 
 provider:
   name: aws
   region: eu-west-1
   runtime: nodejs6.10
   deploymentBucket: serverless-deployments-${env:AWS_REGION}-${env:AWS_ACCOUNT_ID}
+
+custom:
+  prune:
+    automatic: true
+    number: 3
 
 functions:
 
